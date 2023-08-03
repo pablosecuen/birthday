@@ -70,8 +70,8 @@ article img:first-child{
 
 article img:last-child{
   position:absolute;
-  max-width: 250px;
-  max-height: 300px;
+width: 180px;
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -79,6 +79,7 @@ article img:last-child{
   transform: translateY(25%);
   transition: .3s ease;
   opacity: 0;
+
 }
 
 article:hover{
@@ -108,5 +109,5 @@ article:hover::before{
 
 article:hover img:last-child{
   opacity: 1;
-  transform: translateY(0%);
+  transform:  translateY(0%) ;
 }
