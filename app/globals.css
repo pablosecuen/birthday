@@ -24,4 +24,31 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    overflow-x: hidden;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+.medusa{
+  filter: drop-shadow(8px 8px 10px rgba(255, 255, 255, 0.5));
+  transition: filter 1s ease-in-out; 
+  cursor: pointer;
+}
+
+.medusa:hover{
+  filter: drop-shadow(8px 8px 20px rgba(255, 255, 255, 1));
+
+}
+
+.my-atropos {
+  width: 700px;
+  height: 800px;
+  display:flex;
+  justify-content: center;
+
+}
+
+.atropos-scale{
+  width: 1000px !important;
 }

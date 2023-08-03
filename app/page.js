@@ -1,113 +1,186 @@
-import Image from 'next/image'
+"use client";
+import Image from "next/image";
+import medusa from "./assets/medusaimg/medusagreen.png";
+import snakebg from "./assets/medusaimg/space.jpg";
+import slogan from "./assets/slogan/slogan.png";
+import "atropos/css";
+import { useEffect } from "react"; // Import useEffect
+import ContactForm from "./components/Contact/Contact";
 
 export default function Home() {
+  useEffect(() => {
+    const Atropos = require("atropos").default; // Import Atropos library dynamically
+
+    const myAtropos = Atropos({
+      el: ".my-atropos",
+      activeOffset: 40,
+      shadowScale: 1.05,
+      onEnter() {
+        console.log("Enter");
+      },
+      onLeave() {
+        console.log("Leave");
+      },
+      onRotate(x, y) {
+        console.log("Rotate", x, y);
+      },
+    });
+  }, []); // Make sure this effect runs only once after the initial render
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className=" flex flex-col items-center align-middle">
+      {/* medusa */}
+      <div className="flex min-h-screen w-full items-center justify-center  relative">
+        {" "}
+        <div className=" flex justify-center w-full items-center align-middle drop-shadow-sm  absolute overflow-hidden ">
+          <div class="atropos my-atropos w-full flex">
+            {/* <!-- scale container (required) --> */}
+            <div class="atropos-scale  flex">
+              {/* <!-- rotate container (required) --> */}
+
+              <div class="atropos-rotate  flex">
+                {/* <!-- inner container (required) --> */}
+
+                <div class="atropos-inner relative flex bg-space bg-cover bg-no-repeat bg-center -ml-36 mt-24 sm:mt-0">
+                  {/* <!-- put your custom content here --> */}
+
+                  {/* <Image
+                    src={snakebg}
+                    alt="snakes"
+                    width={1000}
+                    height={800}
+                    className=" top-0 w-full h-full absolute -mx-24 "
+                    ata-atropos-offset="-5 "
+                  /> */}
+
+                  <Image
+                    src={medusa}
+                    alt="medusa"
+                    width={500}
+                    height={600}
+                    className="medusa top-24 absolute pl-4 sm:left-68 left-64 w-80  lg:w-[500px] sm:pl-0  "
+                    data-atropos-offset="5"
+                  />
+
+                  <Image
+                    src={slogan}
+                    alt="slogan"
+                    width={500}
+                    height={600}
+                    className="medusa  absolute bottom-96 left-64  sm:left-64 w-80 ml-16   sm:w-auto sm:ml-0 sm:bottom-40 "
+                    data-atropos-offset="12"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      {/* dress code */}
+      <section
+        id="dresscode"
+        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
+      >
+        <h1 className="text-6xl font-bold text-center">Dress Code</h1>
+        <div className="h-full w-full text-center  flex flex-col gap-20 justify-center items-center mt-48">
+          <h3>La tematica de la fiesta sera de disfraces</h3>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
+            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
+            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
+            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
+            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
+            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
+            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
+            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
+            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
+            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
+          </span>
+        </div>
+      </section>
+      {/* line up */}
+      <section
+        id="lineup"
+        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
+      >
+        <h1 className="text-6xl font-bold text-center">Line Up</h1>
+        <div className="h-full flex flex-col gap-20 justify-center items-center mt-48">
+          <h3>
+            El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
+          </h3>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
+            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
+            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
+            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
+            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
+            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
+            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
+            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
+            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
+            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
+          </span>
+        </div>
+      </section>
+      {/* tarjeta */}
+      <section
+        id="tarjeta"
+        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
+      >
+        <h1 className="text-6xl font-bold text-center">Tarjeta</h1>
+        <div className="h-full w-full  flex flex-col gap-20 justify-center items-center mt-48">
+          <h3>
+            El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
+          </h3>
+          <span>
+            Un 18/08/98 el universo me trajo al mundo y 25 años después OSEA Ke me encuentro acá
+            queriendo romper el party con quiénes considero mi familia mi factoría y a quienes
+            quiero que formen parte! No hay nada que disfrute más que la compañía de los míos así
+            que los invito a vivir una noche donde sean lo que quieran ser, dónde bailemos y nos
+            divirtamos hasta que se nos cante ✨ Para hacerlo más divertido les traigo está
+            propuesta indecente y espero poder contar con su inigualable presencia así que atentis!
+          </span>
+        </div>
+      </section>
+      {/* warning */}
+      <section
+        id="warning"
+        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
+      >
+        <h1 className="text-6xl font-bold text-center">Precaución</h1>
+        <div className="h-full  flex flex-col gap-20 justify-center items-center mt-48">
+          <h3>
+            Este es un evento privado, en caso de necesitar invitaciones para sus amistades
+            consultar primero antes de pasar este link
+          </h3>
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
+            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
+            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
+            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
+            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
+            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
+            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
+            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
+            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
+            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
+          </span>
+        </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section
+        id="confirmacion"
+        className="mt-96 w-10/12 flex flex-col justify-center items-center"
+      >
+        <ContactForm />
+      </section>
+      <footer className="flex justify-center items-center h-24 w-full ">
+        <p>
+          {" "}
+          © pablito amico 2023 - Todos los derechos sobre mi bruji reservados - portense mal o serán
+          castigados
+        </p>
+      </footer>
     </main>
-  )
+  );
 }
