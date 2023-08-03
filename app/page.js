@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import medusa from "./assets/medusaimg/medusagreen.png";
-import snakebg from "./assets/medusaimg/space.jpg";
 import slogan from "./assets/slogan/slogan.png";
 import "atropos/css";
 import { useEffect } from "react"; // Import useEffect
@@ -60,7 +59,7 @@ export default function Home() {
                     width={500}
                     height={600}
                     className="medusa top-24 absolute pl-4 sm:left-68 left-64 w-80  lg:w-[500px] sm:pl-0  "
-                    data-atropos-offset="5"
+                    data-atropos-offset="15"
                   />
 
                   <Image
@@ -69,7 +68,7 @@ export default function Home() {
                     width={500}
                     height={600}
                     className="medusa  absolute bottom-96 left-64  sm:left-52 w-80 ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
-                    data-atropos-offset="12"
+                    data-atropos-offset="22"
                   />
                 </div>
               </div>
