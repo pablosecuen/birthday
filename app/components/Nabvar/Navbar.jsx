@@ -6,6 +6,7 @@ import NavnarMenuDesktop from "../NavbarMenu/NavnarMenuDesktop";
 import UseAnimations from "react-useanimations";
 import menu2 from "react-useanimations/lib/menu2";
 import logo from "../../assets/logo/logo.png";
+import pill from "../../assets/logo/pill.png";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -38,6 +39,7 @@ const Navbar = () => {
         ) : (
           <>
             <NavnarMenuDesktop />
+            <Image src={pill} alt="pill" className=" sm:w-20 w-16 ml-4 sm:ml-10" />
           </>
         )}
       </div>

@@ -11,7 +11,7 @@ function NavnarMenuDesktop() {
           <Link href="/">Inicio</Link>
         </li>
         <li className="my-2 hover:text-secondary">
-          <Link href="/dresscode" onClick={(e) => handleNavItemClick(e, "dresscode")}>
+          <Link href="#dresscode" onClick={(e) => handleNavItemClick(e, "dresscode")}>
             Dress Code
           </Link>
         </li>

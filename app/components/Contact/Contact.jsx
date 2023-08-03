@@ -221,12 +221,12 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full px-4 py-2 hover:border-1  text-sm font-bold text-white bg-secondary rounded-md hover:border-2 hover:border-white hover:transition hover:duration-500 focus:outline-none focus:ring focus:border-yellow-600"
+        className="w-full px-4 py-2 hover:border-1 text-lg font-bold text-white bg-secondary rounded-md hover:border-2 hover:border-white hover:transition hover:duration-500 focus:outline-none focus:ring focus:border-yellow-600"
       >
         {" "}
         Enviar
       </button>
-      <p className="text-center text-gray-500 text-xs mt-4 italic">
+      <p className="text-center text-gray-500  mt-4 italic">
         no hay vuelta atrás o serás convertido en piedra
       </p>
     </form>

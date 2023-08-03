@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-css-tags */
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Nabvar/Navbar";

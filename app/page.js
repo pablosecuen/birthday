@@ -120,18 +120,19 @@ export default function Home() {
         id="tarjeta"
         className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
       >
-        <h1 className="text-6xl font-bold text-center">Tarjeta</h1>
+        <h1 className="text-6xl font-bold text-center">invitaciones</h1>
         <div className="h-full w-full  flex flex-col gap-20 justify-center items-center mt-48">
-          <h3>
-            El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
-          </h3>
-          <span>
-            Un 18/08/98 el universo me trajo al mundo y 25 años después OSEA Ke me encuentro acá
-            queriendo romper el party con quiénes considero mi familia mi factoría y a quienes
-            quiero que formen parte! No hay nada que disfrute más que la compañía de los míos así
-            que los invito a vivir una noche donde sean lo que quieran ser, dónde bailemos y nos
-            divirtamos hasta que se nos cante ✨ Para hacerlo más divertido les traigo está
-            propuesta indecente y espero poder contar con su inigualable presencia así que atentis!
+          <span className="text-xl">
+            Un 18/08/98 el universo me trajo al mundo y 25 años
+            <br /> después OSEA Ke me encuentro acá queriendo romper el party con quiénes considero
+            mi familia mi factoría
+            <br /> y a quienes quiero que formen parte!
+            <br /> No hay nada que disfrute más que la compañía de los míos así que los invito a
+            vivir una noche donde sean lo que quieran ser, dónde bailemos
+            <br />
+            y nos divirtamos hasta que se nos cante ✨ <br />
+            Para hacerlo más divertido les traigo está propuesta indecente y espero poder contar con
+            su inigualable presencia así que atentis!
           </span>
         </div>
       </section>
@@ -141,12 +142,12 @@ export default function Home() {
         className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
       >
         <h1 className="text-6xl font-bold text-center">Precaución</h1>
-        <div className="h-full  flex flex-col gap-20 justify-center items-center mt-48">
-          <h3>
+        <div className="h-full flex flex-col gap-20 justify-center items-center mt-48">
+          <h3 className="text-4xl">
             Este es un evento privado, en caso de necesitar invitaciones para sus amistades
             consultar primero antes de pasar este link
           </h3>
-          <span>
+          <span className="text-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
             iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
             eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
@@ -167,7 +168,7 @@ export default function Home() {
       >
         <ContactForm />
       </section>
-      <footer className="flex justify-center items-center h-24 w-full ">
+      <footer className="flex justify-center items-center h-24 w-full text-xs md:text-lg">
         <p>
           {" "}
           © pablito amico 2023 - Todos los derechos sobre mi bruji reservados - portense mal o serán
