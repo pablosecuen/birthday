@@ -6,6 +6,7 @@ import slogan from "./assets/slogan/slogan.png";
 import "atropos/css";
 import { useEffect } from "react"; // Import useEffect
 import ContactForm from "./components/Contact/Contact";
+import Card from "./components/cards/Card";
 
 export default function Home() {
   useEffect(() => {
@@ -67,7 +68,7 @@ export default function Home() {
                     alt="slogan"
                     width={500}
                     height={600}
-                    className="medusa  absolute bottom-96 left-64  sm:left-64 w-80 ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
+                    className="medusa  absolute bottom-96 left-64  sm:left-52 w-80 ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
                     data-atropos-offset="12"
                   />
                 </div>
@@ -82,20 +83,13 @@ export default function Home() {
         className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
       >
         <h1 className="text-6xl font-bold text-center">Dress Code</h1>
-        <div className="h-full w-full text-center  flex flex-col gap-20 justify-center items-center mt-48">
-          <h3>La tematica de la fiesta sera de disfraces</h3>
+        <div className="h-full w-full text-center flex flex-col gap-20 justify-center items-center mt-48">
+          <h3 className="text-4xl ">La tematica de la fiesta sera de disfraces</h3>
           <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
-            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
-            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
-            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
-            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
-            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
-            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
-            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
-            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
-            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
+            Sección de ejemplos e ideas, si ud quiere que su disfraz aparezca en nuestra seccion de
+            disfraces sientase libre de enviarnos su foto
           </span>
+          <Card />
         </div>
       </section>
       {/* line up */}
