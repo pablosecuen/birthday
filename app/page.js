@@ -33,7 +33,7 @@ export default function Home() {
       <div className="flex min-h-screen w-full items-center justify-center  relative">
         {" "}
         <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute overflow-hidden ">
-          <div class="atropos my-atropos w-full flex ml-28 sm:ml-0">
+          <div class="atropos my-atropos w-full flex ml-28 sm:ml-0 ">
             {/* <!-- scale container (required) --> */}
             <div class="atropos-scale  flex">
               {/* <!-- rotate container (required) --> */}
