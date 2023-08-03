@@ -11,6 +11,12 @@ import merlina from "../app/assets/costumes/merlina.png";
 import merlinabg from "../app/assets/costumes/merlinabg.jpg";
 import devil from "../app/assets/costumes/devil.png";
 import devilbg from "../app/assets/costumes/devilbg.jpg";
+import lolla from "../app/assets/costumes/lolla.png";
+import lollabg from "../app/assets/costumes/lollabg.jpg";
+import harley from "../app/assets/costumes/harley.png";
+import harleybg from "../app/assets/costumes/harleybg.jpg";
+import jocker from "../app/assets/costumes/jocker.png";
+import jockerbg from "../app/assets/costumes/jokerbg.jpg";
 
 const costumes = [
   { bg: spiderbg, image: spiderman, alt: "spiderman" },
@@ -18,6 +24,9 @@ const costumes = [
   { bg: jackbg, image: jack, alt: "jack" },
   { bg: merlinabg, image: merlina, alt: "merlina" },
   { bg: devilbg, image: devil, alt: "devil" },
+  { bg: harleybg, image: harley, alt: "harley" },
+  { bg: lollabg, image: lolla, alt: "lolla" },
+  { bg: jockerbg, image: jocker, alt: "jocker" },
 ];
 
 export default costumes;
