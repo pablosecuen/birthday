@@ -32,8 +32,8 @@ export default function Home() {
       {/* medusa */}
       <div className="flex min-h-screen w-full items-center justify-center  relative">
         {" "}
-        <div className=" flex justify-center w-full items-center align-middle drop-shadow-sm  absolute overflow-hidden ">
-          <div class="atropos my-atropos w-full flex">
+        <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute overflow-hidden ">
+          <div class="atropos my-atropos w-full flex ml-28 sm:ml-0">
             {/* <!-- scale container (required) --> */}
             <div class="atropos-scale  flex">
               {/* <!-- rotate container (required) --> */}
@@ -67,7 +67,7 @@ export default function Home() {
                     alt="slogan"
                     width={500}
                     height={600}
-                    className="medusa  absolute bottom-96 left-64  sm:left-64 w-80 ml-16   sm:w-auto sm:ml-0 sm:bottom-40 "
+                    className="medusa  absolute bottom-96 left-64  sm:left-64 w-80 ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
                     data-atropos-offset="12"
                   />
                 </div>
