@@ -52,25 +52,27 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
             <Link href="/">Inicio</Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <Link href="/tracking">Tracking</Link>
+          <Link href="/dresscode" onClick={(e) => handleNavItemClick(e, "dresscode")}>
+            Dress Code
+          </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <Link href="#servicios" onClick={(e) => handleNavItemClick(e, "servicios")}>
-              Servicios
-            </Link>
+          <Link href="#lineup" onClick={(e) => handleNavItemClick(e, "lineup")}>
+            Line Up
+          </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <Link href="#nosotros" onClick={(e) => handleNavItemClick(e, "nosotros")}>
-              Nosotros
-            </Link>
+          <Link href="#tarjeta" onClick={(e) => handleNavItemClick(e, "tarjeta")}>
+            invitaciones
+          </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500">
-            <Link href="#tutoriales" onClick={(e) => handleNavItemClick(e, "tutoriales")}>
-              Tutoriales
-            </Link>
+          <Link href="#warning" onClick={(e) => handleNavItemClick(e, "warning")}>
+            Warning
+          </Link>
           </li>
           <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
-            Contacto
+            Confimación
           </Link>
         </ul>
       </div>
