@@ -47,32 +47,34 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
       >
         <div className="w-24 mx-auto py-8"></div>
         <ul className="flex flex-col">
-          <li className="my-2 hover:text-secondary transition duration-500">
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125 ">
             <Link href="/">Inicio</Link>
           </li>
-          <li className="my-2 hover:text-secondary transition duration-500">
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
             <Link href="#dresscode" onClick={(e) => handleNavItemClick(e, "dresscode")}>
               Dress Code
             </Link>
           </li>
-          <li className="my-2 hover:text-secondary transition duration-500">
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
             <Link href="#lineup" onClick={(e) => handleNavItemClick(e, "lineup")}>
               Line Up
             </Link>
           </li>
-          <li className="my-2 hover:text-secondary transition duration-500">
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
             <Link href="#tarjeta" onClick={(e) => handleNavItemClick(e, "tarjeta")}>
               invitaciones
             </Link>
           </li>
-          <li className="my-2 hover:text-secondary transition duration-500">
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
             <Link href="#warning" onClick={(e) => handleNavItemClick(e, "warning")}>
               Warning
             </Link>
           </li>
-          <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
-            Confimación
-          </Link>
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
+            <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
+              Confimación
+            </Link>
+          </li>
         </ul>
       </div>
     </>
