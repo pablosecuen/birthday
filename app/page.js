@@ -6,6 +6,7 @@ import "atropos/css";
 import { useEffect } from "react"; // Import useEffect
 import ContactForm from "./components/Contact/Contact";
 import Card from "./components/cards/Card";
+import sound from "./assets/items/1x/sound.svg";
 
 export default function Home() {
   useEffect(() => {
@@ -76,53 +77,14 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* dress code */}
-      <section
-        id="dresscode"
-        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
-      >
-        <h1 className="text-6xl font-bold text-center">Dress Code</h1>
-        <div className="h-full w-full text-center flex flex-col gap-20 justify-center items-center mt-48">
-          <h3 className="text-4xl ">La tematica de la fiesta sera de disfraces</h3>
-          <span>
-            Sección de ejemplos e ideas, si ud quiere que su disfraz aparezca en nuestra seccion de
-            disfraces sientase libre de enviarnos su foto
-          </span>
-          <Card />
-        </div>
-      </section>
-      {/* line up */}
-      <section
-        id="lineup"
-        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
-      >
-        <h1 className="text-6xl font-bold text-center">Line Up</h1>
-        <div className="h-full flex flex-col gap-20 justify-center items-center mt-48">
-          <h3>
-            El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
-          </h3>
-          <span>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
-            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
-            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
-            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
-            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
-            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
-            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
-            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
-            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
-            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
-          </span>
-        </div>
-      </section>
       {/* tarjeta */}
       <section
-        id="tarjeta"
-        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
+        id="invitaciones"
+        className="mt-48 w-10/12 text-center flex flex-col justify-center items-center "
       >
-        <h1 className="text-6xl font-bold text-center">invitaciones</h1>
-        <div className="h-full w-full  flex flex-col gap-20 justify-center items-center mt-48">
-          <span className="text-xl">
+        <h1 className="text-6xl font-bold text-center ">invitaciones</h1>
+        <div className="h-full w-full  flex flex-col gap-20 justify-center items-center mt-24 text-xl ">
+          <span className="">
             Un 18/08/98 el universo me trajo al mundo y 25 años
             <br /> después OSEA Ke me encuentro acá queriendo romper el party con quiénes considero
             mi familia mi factoría
@@ -136,13 +98,59 @@ export default function Home() {
           </span>
         </div>
       </section>
+      {/* dress code */}
+      <section
+        id="dresscode"
+        className="mt-48 w-10/12 text-center flex flex-col justify-center items-center "
+      >
+        <h1 className="text-6xl font-bold text-center">Dress Code</h1>
+        <div className="h-full w-full text-center flex flex-col gap-20 justify-center items-center mt-24">
+          <h3 className="text-4xl ">Se lo que quieras ser, te dejamos algo de inspo</h3>
+          <span>
+            Sección de ejemplos e ideas, si ud quiere que su disfraz aparezca en nuestra seccion de
+            disfraces sientase libre de enviarnos su foto
+          </span>
+          <Card />
+        </div>
+      </section>
+      {/* line up */}
+      <section
+        id="lineup"
+        className="relative mt-48 w-10/12 text-center flex flex-col justify-center items-center backdrop-blur-lg "
+      >
+        <h1 className="text-6xl font-bold text-center">Line Up</h1>
+        <Image
+          src={sound}
+          alt="sound"
+          className="absolute -top-20 left-0 w-auto -z-10 medusa mx-auto "
+        />
+
+        <div className="h-full flex flex-col gap-20 justify-center items-center mt-24">
+          <h3 className="backdrop-blur-3xl text-2xl">
+            El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
+          </h3>
+          <span className="backdrop-blur-lg  ">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
+            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
+            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
+            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
+            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
+            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
+            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
+            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
+            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
+            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
+          </span>
+        </div>
+      </section>
+
       {/* warning */}
       <section
         id="warning"
-        className="mt-96 w-10/12 text-center flex flex-col justify-center items-center "
+        className="mt-48 z-50 w-10/12 text-center flex flex-col justify-center items-center"
       >
         <h1 className="text-6xl font-bold text-center">Precaución</h1>
-        <div className="h-full flex flex-col gap-20 justify-center items-center mt-48">
+        <div className="h-full flex flex-col gap-20 justify-center items-center mt-24">
           <h3 className="text-4xl">
             Este es un evento privado, en caso de necesitar invitaciones para sus amistades
             consultar primero antes de pasar este link
@@ -164,7 +172,7 @@ export default function Home() {
 
       <section
         id="confirmacion"
-        className="mt-96 w-10/12 flex flex-col justify-center items-center"
+        className="mt-48 w-10/12 flex flex-col justify-center items-center"
       >
         <ContactForm />
       </section>

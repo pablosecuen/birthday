@@ -17,6 +17,20 @@ import harley from "../app/assets/costumes/harley.png";
 import harleybg from "../app/assets/costumes/harleybg.jpg";
 import jocker from "../app/assets/costumes/jocker.png";
 import jockerbg from "../app/assets/costumes/jokerbg.jpg";
+import barbie from "../app/assets/costumes/barbie.png";
+import barbiebg from "../app/assets/costumes/barbiebg.jpg";
+import breaking from "../app/assets/costumes/breaking.png";
+import breakingbg from "../app/assets/costumes/breakingbg.jpg";
+import alicebg from "../app/assets/costumes/alicebg.jpg";
+import alice from "../app/assets/costumes/alice.png";
+import purge from "../app/assets/costumes/purge.png";
+import purgebg from "../app/assets/costumes/purgebg.jpg";
+import papel from "../app/assets/costumes/papel.png";
+import papelbg from "../app/assets/costumes/papelbg.jpg";
+import superman from "../app/assets/costumes/superman.png";
+import supermanbg from "../app/assets/costumes/supermanbg.jpg";
+import jordan from "../app/assets/costumes/jordan.png";
+import jordanbg from "../app/assets/costumes/jordanbg.jpg";
 
 const costumes = [
   { bg: spiderbg, image: spiderman, alt: "spiderman" },
@@ -27,6 +41,13 @@ const costumes = [
   { bg: harleybg, image: harley, alt: "harley" },
   { bg: lollabg, image: lolla, alt: "lolla" },
   { bg: jockerbg, image: jocker, alt: "jocker" },
+  { bg: breakingbg, image: breaking, alt: "breaking" },
+  { bg: barbiebg, image: barbie, alt: "barbie" },
+  { bg: alicebg, image: alice, alt: "alice" },
+  { bg: purgebg, image: purge, alt: "purge" },
+  { bg: papelbg, image: papel, alt: "papel" },
+  { bg: jordanbg, image: jordan, alt: "jordan" },
+  { bg: supermanbg, image: superman, alt: "superman" },
 ];
 
 export default costumes;

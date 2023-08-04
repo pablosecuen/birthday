@@ -1,7 +1,8 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import handleNavItemClick from "../../../utils/handleNavItemClick";
 
 // import Modal from "../ModalLogin/ModalLogin";
 
@@ -50,28 +51,34 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
           <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125 ">
             <Link href="/">Inicio</Link>
           </li>
-          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
-            <Link href="#dresscode" onClick={(e) => handleNavItemClick(e, "dresscode")}>
+          <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125 ">
+            <Link
+              href="#dresscode"
+              onClick={((e) => handleNavItemClick(e, "dresscode"), toggleMenu)}
+            >
               Dress Code
             </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
-            <Link href="#lineup" onClick={(e) => handleNavItemClick(e, "lineup")}>
+            <Link href="#lineup" onClick={((e) => handleNavItemClick(e, "lineup"), toggleMenu)}>
               Line Up
             </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
-            <Link href="#tarjeta" onClick={(e) => handleNavItemClick(e, "tarjeta")}>
+            <Link
+              href="#invitaciones"
+              onClick={((e) => handleNavItemClick(e, "invitaciones"), toggleMenu)}
+            >
               invitaciones
             </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
-            <Link href="#warning" onClick={(e) => handleNavItemClick(e, "warning")}>
+            <Link href="#warning" onClick={((e) => handleNavItemClick(e, "warning"), toggleMenu)}>
               Warning
             </Link>
           </li>
           <li className="my-2 hover:text-secondary transition duration-500 hover:scale-125">
-            <Link href="#contacto" onClick={(e) => handleNavItemClick(e, "contacto")}>
+            <Link href="#contacto" onClick={((e) => handleNavItemClick(e, "contacto"), toggleMenu)}>
               Confimación
             </Link>
           </li>

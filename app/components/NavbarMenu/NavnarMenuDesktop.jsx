@@ -1,16 +1,18 @@
 import React from "react";
 import Link from "next/link";
 import handleNavItemClick from "../../../utils/handleNavItemClick";
+import Image from "next/image";
+import logo from "../../assets/logo/logo.png";
 
 function NavnarMenuDesktop() {
   return (
-    <div>
+    <div className="flex justify-center items-center w-full mx-auto px-64 align-middle">
       {" "}
-      <ul className="flex gap-10  transition duration-500 ">
+      <ul className="flex gap-10 justify-evenly transition duration-500 items-center w-full">
         <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black hover:scale-125 ">
           <Link href="/">Inicio</Link>
         </li>
-        <li className="my-2 hover:text-secondary">
+        <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black hover:scale-125">
           <Link href="#dresscode" onClick={(e) => handleNavItemClick(e, "dresscode")}>
             Dress Code
           </Link>
@@ -20,8 +22,9 @@ function NavnarMenuDesktop() {
             Line Up
           </Link>
         </li>
+        <Image src={logo} alt="logo" className="h-18 sm:w-20 w-16 ml-4 sm:ml-10" />
         <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black hover:scale-125">
-          <Link href="#tarjeta" onClick={(e) => handleNavItemClick(e, "tarjeta")}>
+          <Link href="#invitaciones" onClick={(e) => handleNavItemClick(e, "invitaciones")}>
             invitaciones
           </Link>
         </li>
