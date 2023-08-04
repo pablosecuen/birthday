@@ -3,12 +3,13 @@ import Image from "next/image";
 import medusa from "./assets/medusaimg/medusagreen.png";
 import slogan from "./assets/slogan/slogan.png";
 import "atropos/css";
-import { useEffect } from "react"; // Import useEffect
+import { useEffect, useState } from "react"; // Import useEffect
 import ContactForm from "./components/Contact/Contact";
 import Card from "./components/cards/Card";
 import sound from "./assets/items/1x/sound.svg";
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const Atropos = require("atropos").default; // Import Atropos library dynamically
 
@@ -27,6 +28,19 @@ export default function Home() {
       },
     });
   }, []); // Make sure this effect runs only once after the initial render
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
+  }, []);
+
+  const handleSmoothScroll = () => {
+    if (isMobile) {
+      window.scrollBy({
+        top: 800,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <main className=" flex flex-col items-center align-middle">
@@ -77,6 +91,15 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {isMobile && (
+        <button
+          className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-50 absolute bottom-6 border rounded-2xl animate-pulse"
+          onClick={handleSmoothScroll}
+        >
+          Revela el misterio tocando aquí
+          <p className="text-center mx-auto text-xl">▽</p>
+        </button>
+      )}
       {/* tarjeta */}
       <section
         id="invitaciones"
