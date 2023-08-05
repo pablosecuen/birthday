@@ -107,7 +107,7 @@ export default function Home() {
         {sectionsData.map((section) => (
           <section
             key={section.id}
-            className=" w-[350px] h-full flex flex-col items-center  rounded-3xl justify-center p-4  bg-card bg-cover bg-center bg-no-repeat "
+            className=" w-[350px] h-full flex flex-col items-center  rounded-3xl justify-center p-4  bg-card bg-contain bg-center bg-no-repeat "
           >
             <div className="relative text-center flex flex-col items-center ">
               <h2 className="card pb-4 font-bold text-center text-2xl contrast-100  l ">
