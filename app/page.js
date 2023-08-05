@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
 import medusa from "./assets/medusaimg/medusagreen.png";
@@ -7,6 +8,7 @@ import { useEffect, useState } from "react"; // Import useEffect
 import ContactForm from "./components/Contact/Contact";
 import Card from "./components/cards/Card";
 import sound from "./assets/items/1x/sound.svg";
+import sectionsData from "../utils/data";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -100,106 +102,48 @@ export default function Home() {
           <p className="text-center mx-auto text-xl">▽</p>
         </button>
       )}
-      {/* tarjeta */}
-      <section
-        id="invitaciones"
-        className="mt-48 w-10/12 text-center flex flex-col justify-center items-center "
-      >
-        <h1 className="text-6xl font-bold text-center ">invitaciones</h1>
-        <div className="h-full w-full  flex flex-col gap-20 justify-center items-center mt-24 text-xl ">
-          <span className="">
-            Un 18/08/98 el universo me trajo al mundo y 25 años
-            <br /> después OSEA Ke me encuentro acá queriendo romper el party con quiénes considero
-            mi familia mi factoría
-            <br /> y a quienes quiero que formen parte!
-            <br /> No hay nada que disfrute más que la compañía de los míos así que los invito a
-            vivir una noche donde sean lo que quieran ser, dónde bailemos
-            <br />
-            y nos divirtamos hasta que se nos cante ✨ <br />
-            Para hacerlo más divertido les traigo está propuesta indecente y espero poder contar con
-            su inigualable presencia así que atentis!
-          </span>
-        </div>
-      </section>
+
+      <div className="flex flex-col mt-32 w-[80vw]  justify-evenly items-center md:flex-row md:h-[500px] gap-20">
+        {sectionsData.map((section) => (
+          <section
+            key={section.id}
+            className=" w-[350px] h-full flex flex-col items-center  rounded-3xl justify-center p-4  bg-card bg-cover bg-center bg-no-repeat "
+          >
+            <div className="relative text-center flex flex-col items-center ">
+              <h2 className="card pb-4 font-bold text-center text-2xl contrast-100  l ">
+                {section?.title}
+              </h2>
+              <span className="card  rounded-2xl">{section?.subtitle}</span>
+              {section.content}
+            </div>
+          </section>
+        ))}
+      </div>
+
       {/* dress code */}
       <section
         id="dresscode"
-        className="mt-48 w-10/12 text-center flex flex-col justify-center items-center "
+        className="md:mt-48 mt-12 w-10/12 text-center flex flex-col justify-center items-center "
       >
-        <h1 className="text-6xl font-bold text-center">Dress Code</h1>
-        <div className="h-full w-full text-center flex flex-col gap-20 justify-center items-center mt-24">
-          <h3 className="text-4xl ">Se lo que quieras ser, te dejamos algo de inspo</h3>
-          <span>
+        <h1 className="text-2xl md:text-6xl font-bold text-center">Dress Code</h1>
+        <div className="h-full w-full text-center flex flex-col gap-20 justify-center items-center mt-8 md:mt-24">
+          <h3 className=" text-lg md:text-4xl ">Se lo que quieras ser, te dejamos algo de inspo</h3>
+          <span className="italic">
             Sección de ejemplos e ideas, si ud quiere que su disfraz aparezca en nuestra seccion de
             disfraces sientase libre de enviarnos su foto
           </span>
           <Card />
         </div>
       </section>
-      {/* line up */}
-      <section
-        id="lineup"
-        className="relative mt-48 w-10/12 text-center flex flex-col justify-center items-center backdrop-blur-lg "
-      >
-        <h1 className="text-6xl font-bold text-center">Line Up</h1>
-        <Image
-          src={sound}
-          alt="sound"
-          className="absolute -top-20 left-0 w-auto -z-10 medusa mx-auto "
-        />
 
-        <div className="h-full flex flex-col gap-20 justify-center items-center mt-24">
-          <h3 className="backdrop-blur-3xl text-2xl">
-            El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
-          </h3>
-          <span className="backdrop-blur-lg  ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
-            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
-            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
-            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
-            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
-            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
-            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
-            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
-            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
-            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
-          </span>
-        </div>
-      </section>
-
-      {/* warning */}
-      <section
-        id="warning"
-        className="mt-48 z-50 w-10/12 text-center flex flex-col justify-center items-center"
-      >
-        <h1 className="text-6xl font-bold text-center">Precaución</h1>
-        <div className="h-full flex flex-col gap-20 justify-center items-center mt-24">
-          <h3 className="text-4xl">
-            Este es un evento privado, en caso de necesitar invitaciones para sus amistades
-            consultar primero antes de pasar este link
-          </h3>
-          <span className="text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
-            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
-            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
-            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus purus a mi.
-            Curabitur sit amet orci odio. Nunc ut metus vitae nunc tincidunt tincidunt. Vivamus id
-            dictum quam. Ut ut laoreet turpis. Vestibulum eu massa nec felis feugiat consectetur nec
-            sit amet mi. Praesent mattis sagittis purus nec venenatis. Nulla tincidunt velit ex, id
-            hendrerit purus iaculis sit amet. Fusce ac tincidunt nisl. Fusce eget nunc ac urna
-            maximus elementum nec ut elit. Nulla tempus consectetur sem ac posuere. Vestibulum
-            suscipit elit eu arcu blandit, sit amet euismod est fermentum.
-          </span>
-        </div>
-      </section>
-
+      {/* contacto */}
       <section
         id="confirmacion"
-        className="mt-48 w-10/12 flex flex-col justify-center items-center"
+        className="md:mt-32  w-10/12 flex flex-col justify-center items-center"
       >
         <ContactForm />
       </section>
-      <footer className="flex justify-center items-center h-24 w-full text-xs md:text-lg">
+      <footer className="flex justify-center px-10 items-center h-24 w-full text-xs md:text-lg">
         <p>
           {" "}
           © pablito amico 2023 - Todos los derechos sobre mi bruji reservados - portense mal o serán

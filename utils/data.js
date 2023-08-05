@@ -1,67 +1,60 @@
-import svgExpreso from "../assets/services/Group.svg"
-import svgUrgencia from "../assets/services/prime_clock.svg"
-import svgExclusivo from "../assets/services/Vector.svg"
-import cargas from "../assets/services/argentina.svg"
-import transporte from "../assets/services/box.svg"
-import contenedores from "../assets/services/cargo.svg"
-import pago from "../assets/services/payment-method.svg"
-import tramites from "../assets/services/mail-send.svg"
-import client1  from "../assets/clients/Capa_1-1.svg"
-import client2  from "../assets/clients/Capa_1.svg"
-import client3  from "../assets/clients/image7.svg"
-import client4  from "../assets/clients/image8.svg"
-import client5  from "../assets/clients/image9.svg"
+/* eslint-disable react/no-unescaped-entities */
+const sectionsData = [
+  {
+    id: "lineup",
+    title: "Line Up",
+    content: (
+      <>
+        <h3 className="card italic text-md pb-4 ">
+          El line up del evento y sus horarios (pueden variar acorde a la vibra de la noche)
+        </h3>
+        <span className="card text-sm b">
+          Durante la noche se presentaran dj's amigos de cachengue y electronica siguiendo el clima
+          de la noche, si bien no tendremos horarios definidos para que todo fluja naturalmente
+          comenzaremos con cachengue mientras brindamos y compartimos tragos, nos conocemos entre
+          los asistentes y nos ponemos cómodos.
+        </span>
+      </>
+    ),
+  },
+  {
+    id: "invitaciones",
+    title: "Invitación",
+    content: (
+      <span className="b">
+        Un 18/08/98 el universo me trajo al mundo y 25 años
+        <br /> después OSEA Ke me encuentro acá queriendo romper el party con quiénes considero mi
+        familia mi factoría
+        <br /> y a quienes quiero que formen parte!
+        <br /> No hay nada que disfrute más que la compañía de los míos así que los invito a vivir
+        una noche donde sean lo que quieran ser, dónde bailemos
+        <br />
+        y nos divirtamos hasta que se nos cante ✨ <br />
+        Para hacerlo más divertido les traigo está propuesta indecente y espero poder contar con su
+        inigualable presencia así que atentis!
+      </span>
+    ),
+  },
+  {
+    id: "warning",
+    title: "Precaución",
+    content: (
+      <>
+        <div className=" flex flex-col  justify-center items-center pb-8 md:pb-4">
+          <h3 className="italic text-md pb-8 md:p-4 b">
+            Este es un evento privado, en caso de necesitar invitaciones para sus amistades
+            consultar primero antes de pasar este link
+          </h3>
+          <span className="text-sm b">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,
+            iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,
+            eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat,
+            felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus
+          </span>
+        </div>
+      </>
+    ),
+  },
+];
 
-
-export const services = [
-    {
-        title:"SERVICIO EXPRESO",
-        description: "Diario desde Bs As a San Lorenzo, Rosario y alrededores.",
-        icon: svgExpreso,
-    },
-    {
-        title:"SERVICIO EXCLUSIVO",
-        description: "Su empresa puede contar con una unidad permanente para las operaciones cotidianas.",
-        icon: svgUrgencia,
-    },
-    {
-        title:"SERVICIO DE URGENCIA",
-        description: "Buenos Aires - San Lorenzo / San Lorenzo - Buenos Aires.",
-        icon: svgExclusivo,
-    },
-    {
-        title:"CARGAS COMPLETAS ",
-        description: "A todo el país. ",
-        icon: cargas,
-    },
-    {
-        title:"TRANSPORTE Y DISTRIBUCIÓN ",
-        description: "De cargas generales, mudanzas, encomiendas ",
-        icon: transporte,
-    },
-    {
-        title:"MOVIMIENTO DE CONTENEDORES ",
-        description: "Este servicio contempla el retiro y entrega del contenedor hasta su posterior devolución en puerto.",
-        icon: contenedores,
-    },
-    {
-        title:"PAGO CONTRA REEMBOLSO ",
-        description: "Realizamos la distribución y cobranza de sus productos.",
-        icon: pago,
-    },
-    {
-        title:"GESTIÓN DE TRÁMITES ",
-        description: "Nos encargamos de realizar sus diligencias administrativas.",
-        icon: contenedores,
-    },
-  
-]
-
-export const slider = [
-    {icon: client1, tittle:"GALPRO SRL", url:"https://www.galpro.com.ar/"},
-    {icon: client2, tittle:"REFIL", url:"https://www.refil.com.ar/"},
-    {icon: client3, tittle:"BINDER PLUS", url:"https://binderplus.com.ar/"},
-    {icon: client4, tittle:"WIENER LAB", url:"https://www.wiener-lab.com.ar/es-AR/"},
-    {icon: client5, tittle:"SOLUCIONES", url:""},
-  
-]
+export default sectionsData;
