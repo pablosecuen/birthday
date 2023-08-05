@@ -3,6 +3,8 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import medusa from "../../assets/medusaimg/medusagreen.png";
 import slogan from "../../assets/slogan/slogan.png";
+import columns from "../../assets/medusaimg/columns.png";
+
 import "atropos/css";
 
 function Landing() {
@@ -57,14 +59,14 @@ function Landing() {
                 <div class="atropos-inner relative flex bg-space bg-cover bg-no-repeat bg-center -ml-36 mt-24 sm:mt-0">
                   {/* <!-- put your custom content here --> */}
 
-                  {/* <Image
-                    src={snakebg}
-                    alt="snakes"
-                    width={1000}
+                  <Image
+                    src={columns}
+                    alt="columns"
+                    width={800}
                     height={800}
-                    className=" top-0 w-full h-full absolute -mx-24 "
-                    ata-atropos-offset="-5 "
-                  /> */}
+                    className="medusa top-24 absolute pl-4 sm:left-68 left-24  sm:pl-0 contrast-200 brightness-50 "
+                    data-atropos-offset="5"
+                  />
 
                   <Image
                     src={medusa}
@@ -72,7 +74,7 @@ function Landing() {
                     width={500}
                     height={600}
                     className="medusa top-24 absolute pl-4 sm:left-68 left-64 w-80  lg:w-[500px] sm:pl-0  "
-                    data-atropos-offset="15"
+                    data-atropos-offset="16"
                   />
 
                   <Image
