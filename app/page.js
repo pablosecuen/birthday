@@ -4,17 +4,26 @@ import ContactForm from "./components/Contact/Contact";
 import Card from "./components/cards/Card";
 import Landing from "./components/landing/Landing";
 import sectionsData from "../utils/data";
+import ring from "./assets/cards/cardbg-01.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <main className=" flex flex-col items-center align-middle">
       <Landing />
 
-      <div className="flex flex-col mt-32 w-[80vw]  justify-evenly items-center md:flex-row md:h-[500px] gap-20">
+      <div className="flex relative flex-col mt-32 md:mt-48 w-[80vw] h-full justify-evenly items-center md:flex-row md:h-[500px] gap-20 ">
+        <Image
+          src={ring}
+          alt="ring"
+          width={500}
+          height={500}
+          className="absolute rounded-3xl w-[800px]"
+        />
         {sectionsData.map((section) => (
           <section
             key={section.id}
-            className=" w-[350px] h-full flex flex-col items-center  rounded-3xl justify-center p-4  bg-card bg-contain bg-center bg-no-repeat "
+            className=" w-[350px] h-full flex flex-col items-center  rounded-3xl justify-center p-4  "
           >
             <div className="relative text-center flex flex-col items-center ">
               <h2 className="card pb-4 font-bold text-center text-2xl contrast-100  l ">
