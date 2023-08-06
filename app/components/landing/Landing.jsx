@@ -37,7 +37,7 @@ function Landing() {
   return (
     <>
       {/* medusa */}
-      <div className="flex min-h-screen w-full top-32 items-center justify-center  relative">
+      <div className="flex min-h-screen w-full top-20 items-center justify-center  relative">
         <h1 className="card absolute z-40 top-0 font-elektra tracking-widest text-xl md:text-3xl flex text-yellow-300 text-center">
           <p> SAVE THE DATE</p> <p className=" font-bold px-2">19 agosto</p>
         </h1>{" "}
