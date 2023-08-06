@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const handleSmoothScroll = (isMobile) => {
-  if (isMobile) {
-    const infoElement = document.getElementById("info");
-    if (infoElement) {
-      infoElement.scrollIntoView({ behavior: "smooth" });
+function Button(isMobile, setIsMobile) {
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
+  }, []);
+
+  const handleSmoothScroll = () => {
+    if (isMobile) {
+      const infoElement = document.getElementById("info");
+      if (infoElement) {
+        infoElement.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  }
-};
-function Button() {
+  };
   return (
     <button
       className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-50 absolute top-[82vh] border rounded-2xl animate-pulse"
