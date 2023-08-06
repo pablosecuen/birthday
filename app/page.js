@@ -6,7 +6,7 @@ const LandingComponent = dynamic(() => import("./components/landing/Landing"));
 const InfoComponent = dynamic(() => import("./components/info/Info"));
 const CardComponent = dynamic(() => import("./components/cards/Card"));
 const ContactFormComponent = dynamic(() => import("./components/Contact/Contact"));
-const PreloaderComponent = dynamic(() => import("./components/preloader/Preloader"));
+const PreloaderComponent = dynamic(() => import("./components/preloader/preloader"));
 
 export default function Home() {
   const loading = usePageLoading();
