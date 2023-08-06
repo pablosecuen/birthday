@@ -16,7 +16,7 @@ export default function Home() {
       {loading ? (
         <PreloaderComponent />
       ) : (
-        <main className=" flex flex-col items-center align-middle bg-black">
+        <main className=" flex flex-col items-center align-middle bg-black overflow-x-hidden">
           <LandingComponent />
           <InfoComponent />
           {/* dress code */}
