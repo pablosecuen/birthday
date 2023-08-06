@@ -77,12 +77,12 @@ const ContactForm = () => {
 
   return (
     <form
-      className="p-4 md:w-1/2 md:mx-auto  m-auto  border-2 rounded-2xl lg:py-10 py-10 mt-48"
+      className="p-4 md:w-1/2 md:mx-auto  m-auto  border-2 rounded-2xl lg:py-10 py-10 mt-20"
       id="contacto"
       onSubmit={handleSubmit}
     >
       <Toaster position="top-center" richColors />
-      <h3 className="text-center pb-10 text-white  text-xl font-extrabold">
+      <h3 className="text-center pb-10 text-white  text-xl font-extrabold font-azonix">
         Formulario de confirmación
       </h3>
       <div className="w-full flex gap-4">
@@ -221,7 +221,7 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="w-full px-4 py-2 hover:border-1 text-lg font-bold text-white bg-secondary rounded-md hover:border-2 hover:border-white hover:transition hover:duration-500 focus:outline-none focus:ring focus:border-yellow-600"
+        className="w-full font-azonix px-4 py-2 hover:border-1 text-lg font-bold text-white bg-secondary rounded-md hover:border-2 hover:border-white hover:transition hover:duration-500 focus:outline-none focus:ring focus:border-yellow-600"
       >
         {" "}
         Enviar

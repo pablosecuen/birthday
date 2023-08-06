@@ -64,7 +64,7 @@ function Landing() {
                     alt="columns"
                     width={800}
                     height={800}
-                    className="medusa top-24 absolute pl-4 sm:left-68 left-24  sm:pl-0 contrast-200 brightness-50 "
+                    className="medusa top-24 absolute w-[450px] left-48  sm:pl-0 contrast-200 brightness-50 sm:w-[800px] sm:left-24 "
                     data-atropos-offset="5"
                   />
 
@@ -93,7 +93,7 @@ function Landing() {
       </div>
       {isMobile && (
         <button
-          className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-50 absolute bottom-6 border rounded-2xl animate-pulse"
+          className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-40 absolute bottom-6 border rounded-2xl animate-pulse"
           onClick={handleSmoothScroll}
         >
           Revela el misterio tocando aquí

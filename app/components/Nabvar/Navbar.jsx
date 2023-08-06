@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="z-50 fixed h-24 bg-transparent  -pl-8 border-white w-screen flex items-center justify-between align-middle lg:pr-8 bg-metal2 bg-center bg-contain backdrop-blur-2xl">
+      <div className="z-50 fixed h-16 bg-transparent  -pl-8 border-white w-screen flex items-center justify-between align-middle lg:pr-8 bg-metal2 bg-center bg-contain backdrop-blur-2xl">
         {isMobile ? (
           <>
             <Image src={logo} alt="logo" className="h-18 sm:w-20 w-16 ml-4 sm:ml-10" />
