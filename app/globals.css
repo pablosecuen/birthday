@@ -131,16 +131,3 @@ article:hover img:last-child{
   filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 1));
 }
 
-
-@media (max-width: 767px) {
-  .mobile-button {
-    display: block !important; /* Mostrar el botón en dispositivos móviles */
-  }
-}
-
-/* Estilos para el botón en dispositivos de pantalla más grande */
-@media (min-width: 768px ){
- .mobile-button {
-  display: none !important; /* Ocultar el botón en pantallas más grandes */ 
-}
-}

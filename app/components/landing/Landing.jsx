@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import medusa from "../../assets/medusaimg/medusagreen.png";
 import slogan from "../../assets/slogan/slogan.png";
 import columns from "../../assets/medusaimg/columns.png";
 import Button from "../button/Button";
-// import { isMobile } from "react-device-detect";
+
 
 import "atropos/css";
 
@@ -80,7 +80,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      {/* {isMobile && <Button isMobile={isMobile} />} */}
+  
       <Button className="mobile-button" />
     </>
   );
