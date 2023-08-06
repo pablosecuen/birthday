@@ -11,6 +11,7 @@ module.exports = {
         space: "url('./assets/medusaimg/space.webp')",
         columns: "url('./assets/medusaimg/columns.png')",
         card: "url('./assets/cards/cardbg-01.png')",
+        spinner: "url('./assets/spinner/zodiac.gif')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },

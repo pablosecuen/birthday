@@ -48,15 +48,15 @@ function Landing() {
       <div className="flex min-h-screen w-full items-center justify-center  relative">
         {" "}
         <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute overflow-hidden ">
-          <div class="atropos my-atropos w-full flex ml-36 mt-20 sm:mt-0 sm:ml-0 ">
+          <div className="atropos my-atropos w-full flex ml-36 mt-20 sm:mt-0 sm:ml-0 ">
             {/* <!-- scale container (required) --> */}
-            <div class="atropos-scale  flex">
+            <div className="atropos-scale  flex">
               {/* <!-- rotate container (required) --> */}
 
-              <div class="atropos-rotate  flex">
+              <div className="atropos-rotate  flex">
                 {/* <!-- inner container (required) --> */}
 
-                <div class="atropos-inner relative flex bg-space bg-cover bg-no-repeat bg-center -ml-36 mt-24 sm:mt-0">
+                <div className="atropos-inner relative flex bg-space bg-cover bg-no-repeat bg-center -ml-36 mt-24 sm:mt-0">
                   {/* <!-- put your custom content here --> */}
 
                   <Image
@@ -64,7 +64,7 @@ function Landing() {
                     alt="columns"
                     width={800}
                     height={800}
-                    className="medusa top-24 absolute w-[450px] left-48  sm:pl-0 contrast-200 brightness-50 sm:w-[800px] sm:left-24 "
+                    className="medusa top-24 absolute w-[450px] left-48 h-[400px] md:h-[600px]  sm:pl-0 contrast-200 brightness-50 sm:w-[800px] sm:left-24 "
                     data-atropos-offset="5"
                   />
 
@@ -82,7 +82,7 @@ function Landing() {
                     alt="slogan"
                     width={500}
                     height={600}
-                    className="medusa  absolute bottom-96 left-64  sm:left-52 w-80 ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
+                    className="medusa  absolute bottom-96 left-64  sm:left-52 w-80  ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
                     data-atropos-offset="22"
                   />
                 </div>
@@ -103,21 +103,4 @@ function Landing() {
     </>
   );
 }
-
-// Comprueba si el componente ya está almacenado en caché
-const cachedLandingComponent = localStorage.getItem("cachedLandingComponent");
-
-let ExportedComponent;
-
-// Si el componente está en caché y no es undefined, utilízalo en lugar de exportar el componente directamente
-if (cachedLandingComponent && cachedLandingComponent !== "undefined") {
-  ExportedComponent = JSON.parse(cachedLandingComponent);
-} else {
-  ExportedComponent = Landing;
-
-  // Si el componente no está en caché o es undefined, guárdalo en el localStorage
-  localStorage.setItem("cachedLandingComponent", JSON.stringify(Landing));
-}
-
-// Exporta el componente
-export default ExportedComponent;
+export default Landing;

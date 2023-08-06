@@ -1,45 +1,24 @@
-/* eslint-disable react/no-unescaped-entities */
 "use client";
-import React from "react";
-import ContactForm from "./components/Contact/Contact";
-import Card from "./components/cards/Card";
-import zodiac from "./assets/spinner/zodiac.gif";
-import Info from "./components/info/Info";
+import usePageLoading from "./customHooks/usePageLoading.js";
 import dynamic from "next/dynamic";
-import { QueryClient, QueryClientProvider } from "react-query";
-import Image from "next/image";
-
-const queryClient = new QueryClient();
 
 const LandingComponent = dynamic(() => import("./components/landing/Landing"));
+const InfoComponent = dynamic(() => import("./components/info/Info"));
+const CardComponent = dynamic(() => import("./components/cards/Card"));
+const ContactFormComponent = dynamic(() => import("./components/Contact/Contact"));
+const PreloaderComponent = dynamic(() => import("./components/preloader/Preloader"));
 
 export default function Home() {
+  const loading = usePageLoading();
+
   return (
-    <QueryClientProvider client={queryClient}>
-      <React.Suspense
-        fallback={
-          <Image
-            src={zodiac}
-            alt="loading"
-            width={1920}
-            height={1080}
-            layout="fixed"
-            className="fixed top-0 left-0 z-50"
-            objectFit="cover"
-            objectPosition="center"
-            placeholder="blur"
-            blurDataURL={zodiac}
-            unoptimized={true}
-            loading="lazy"
-            priority={true}
-          />
-        }
-      >
+    <div>
+      {loading ? (
+        <PreloaderComponent />
+      ) : (
         <main className=" flex flex-col items-center align-middle">
           <LandingComponent />
-
-          <Info />
-
+          <InfoComponent />
           {/* dress code */}
           <section
             id="dresscode"
@@ -54,7 +33,7 @@ export default function Home() {
                 Sección de ejemplos e ideas, si ud quiere que su disfraz aparezca en nuestra seccion
                 de disfraces sientase libre de enviarnos su foto
               </span>
-              <Card />
+              <CardComponent />
             </div>
           </section>
 
@@ -63,7 +42,7 @@ export default function Home() {
             id="confirmacion"
             className="md:mt-32  w-10/12 flex flex-col justify-center items-center"
           >
-            <ContactForm />
+            <ContactFormComponent />
           </section>
           <footer className="flex justify-center px-10 items-center h-24 w-full text-xs md:text-[1rem] text-center mt-10">
             <p>
@@ -72,7 +51,7 @@ export default function Home() {
             </p>
           </footer>
         </main>
-      </React.Suspense>
-    </QueryClientProvider>
+      )}
+    </div>
   );
 }
