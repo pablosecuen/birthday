@@ -20,7 +20,10 @@ function Info() {
   }, []);
 
   return (
-    <section className="flex relative flex-col mt-32 md:mt-72 w-[80vw] h-full justify-evenly items-center md:flex-row md:h-[500px] gap-20 ">
+    <section
+      id="info"
+      className="flex relative flex-col mt-32 md:mt-72 w-[80vw] h-full justify-evenly items-center md:flex-row md:h-[500px] gap-20 "
+    >
       {!isMobile && (
         <Image
           src={ring}
