@@ -5,21 +5,21 @@ const usePageLoading = () => {
 
   useEffect(() => {
     let loadingTimeout;
-    let contentLoaded = false;
 
     const handleLoad = () => {
-      contentLoaded = true;
       setLoading(false);
     };
 
-    // Inicialmente, marcamos la página como cargada después de un tiempo determinado
+    // Mostramos el loader inicialmente
+    setLoading(true);
+
+    // Inicialmente, establecemos un tiempo de 3 segundos para mostrar el loader
     loadingTimeout = setTimeout(() => {
-      if (!contentLoaded) {
-        setLoading(false);
-      }
+      handleLoad();
     }, 3000); // Cambia el tiempo según la duración de tus componentes y recursos
 
-    // Luego, si el evento de carga se dispara, cancelamos el tiempo de espera y marcamos la página como cargada
+    // Luego, si el evento de carga se dispara, cancelamos el tiempo de espera
+    // para que el loader no se oculte hasta que el contenido esté listo
     window.addEventListener("load", handleLoad);
 
     return () => {
