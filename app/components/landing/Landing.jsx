@@ -104,4 +104,16 @@ function Landing() {
   );
 }
 
-export default Landing;
+// Comprueba si el componente ya está almacenado en caché
+const cachedLandingComponent = localStorage.getItem("cachedLandingComponent");
+
+// Si el componente está en caché, utilízalo en lugar de exportar el componente directamente
+const ExportedComponent = cachedLandingComponent ? JSON.parse(cachedLandingComponent) : Landing;
+
+// Si el componente no está en caché, guárdalo en el localStorage
+if (!cachedLandingComponent) {
+  localStorage.setItem("cachedLandingComponent", JSON.stringify(Landing));
+}
+
+// Exporta el componente
+export default ExportedComponent;
