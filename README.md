@@ -1,5 +1,5 @@
 MEDUXA FEST - Invitación para el Cumpleaños de Luli Grassi🎂
-<img src=“/app/assets/logo/logo.png” alt=“MEDUXA FEST Logo” width=“30” height=“30”>
+<img align="center" src=“https://github.com/pablosecuen/birthday/blob/1a5fb18b03025381ee090af8fe2bbe153f6ea6bb/app/assets/logo/logo.png” alt=“MEDUXA FEST Logo” height="30" width="40">
 
 ¡Bienvenidos a MEDUXA FEST!🙌
 
