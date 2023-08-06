@@ -1,6 +1,6 @@
 import React from "react";
 
-const handleSmoothScroll = () => {
+const handleSmoothScroll = (isMobile) => {
   if (isMobile) {
     window.scrollBy({
       top: 800,
