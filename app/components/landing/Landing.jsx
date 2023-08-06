@@ -34,14 +34,7 @@ function Landing() {
     setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
   }, []);
 
-  const handleSmoothScroll = () => {
-    if (isMobile) {
-      window.scrollBy({
-        top: 800,
-        behavior: "smooth",
-      });
-    }
-  };
+
 
   return (
     <>
