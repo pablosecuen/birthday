@@ -16,7 +16,7 @@ function Button() {
   };
   return (
     <button
-      className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-50 absolute top-[82vh] border rounded-2xl animate-pulse"
+      className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-40 absolute top-[82vh] border rounded-2xl animate-pulse"
       onClick={handleSmoothScroll}
     >
       Revela el misterio tocando aquí
