@@ -107,11 +107,15 @@ function Landing() {
 // Comprueba si el componente ya está almacenado en caché
 const cachedLandingComponent = localStorage.getItem("cachedLandingComponent");
 
-// Si el componente está en caché, utilízalo en lugar de exportar el componente directamente
-const ExportedComponent = cachedLandingComponent ? JSON.parse(cachedLandingComponent) : Landing;
+let ExportedComponent;
 
-// Si el componente no está en caché, guárdalo en el localStorage
-if (!cachedLandingComponent) {
+// Si el componente está en caché y no es undefined, utilízalo en lugar de exportar el componente directamente
+if (cachedLandingComponent && cachedLandingComponent !== "undefined") {
+  ExportedComponent = JSON.parse(cachedLandingComponent);
+} else {
+  ExportedComponent = Landing;
+
+  // Si el componente no está en caché o es undefined, guárdalo en el localStorage
   localStorage.setItem("cachedLandingComponent", JSON.stringify(Landing));
 }
 
