@@ -35,7 +35,7 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
   return (
     <>
       <div
-        className={`transition-all duration-500 ${
+        className={`transition-all duration-500 sm:hidden ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         } fixed  h-screen sm:mt-16 mt-14 w-screen top-0 left-0 bg-black/40 z-40`}
         onClick={toggleMenu}
@@ -44,7 +44,7 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
       <div
         className={`transition-all duration-1000 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed z-50 bg-black top-12 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 `}
+        } fixed z-50 bg-black top-12 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 sm:hidden`}
       >
         <div className="w-24 mx-auto py-8"></div>
         <ul className="flex flex-col">
