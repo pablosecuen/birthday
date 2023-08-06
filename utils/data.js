@@ -26,7 +26,7 @@ const sectionsData = [
       subtitle:
         "  Este es un evento privado, en caso de necesitar invitaciones para sus amistades consultar primero antes de pasar este link",
       description:
-        "  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel justo ultricies,iaculis risus quis, sollicitudin dui. Suspendisse potenti. Sed hendrerit congue leo,eget aliquam odio. Maecenas facilisis lectus eget orci volutpat malesuada. Sed volutpat, felis id suscipit rhoncus, arcu turpis malesuada libero, eu gravida lectus",
+        " Cada uno deberá traer lo que quiera tomar/consumir (recuerden es importante mantenernos hidratados 😏) Queda termiantemente prohibido portarse bien",
     },
   },
 ];

@@ -45,9 +45,11 @@ function Landing() {
   return (
     <>
       {/* medusa */}
-      <div className="flex min-h-screen w-full items-center justify-center  relative">
-        {" "}
-        <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute overflow-hidden ">
+      <div className="flex min-h-screen w-full top-32 items-center justify-center  relative">
+        <h1 className="card absolute z-50 top-32 font-elektra tracking-widest text-xl md:text-3xl flex text-yellow-300 text-center">
+          <p> SAVE THE DATE</p> <p className=" font-bold px-2">18 agosto</p>
+        </h1>{" "}
+        <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute -top-32 md:top-0">
           <div className="atropos my-atropos w-full flex ml-36 mt-20 sm:mt-0 sm:ml-0 ">
             {/* <!-- scale container (required) --> */}
             <div className="atropos-scale  flex">
