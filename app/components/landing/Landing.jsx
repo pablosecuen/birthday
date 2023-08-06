@@ -84,7 +84,7 @@ function Landing() {
                     alt="slogan"
                     width={500}
                     height={600}
-                    className="medusa  absolute bottom-96 left-64  sm:left-52 w-80  ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
+                    className="card  absolute bottom-96 left-64  sm:left-52 w-80  ml-4   sm:w-auto sm:ml-0 sm:bottom-40 "
                     data-atropos-offset="22"
                   />
                 </div>
