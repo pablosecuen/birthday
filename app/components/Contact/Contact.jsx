@@ -54,7 +54,7 @@ const ContactForm = () => {
     };
 
     // Envía el correo electrónico utilizando EmailJS
-    // await emailjs.send("service_7apabaf", "template_ofkao8n", emailParams, "BjaDOr-Fp1JZhklEF");
+    await emailjs.send("service_7apabaf", "template_ofkao8n", emailParams, "BjaDOr-Fp1JZhklEF");
     const promise = emailjs.send(
       "service_7apabaf",
       "template_ofkao8n",
