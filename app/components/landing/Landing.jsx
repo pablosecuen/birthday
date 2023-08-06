@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import medusa from "../../assets/medusaimg/medusagreen.png";
 import slogan from "../../assets/slogan/slogan.png";
 import columns from "../../assets/medusaimg/columns.png";
+import Button from "../button/Button";
 
 import "atropos/css";
 
@@ -46,7 +47,7 @@ function Landing() {
     <>
       {/* medusa */}
       <div className="flex min-h-screen w-full top-32 items-center justify-center  relative">
-        <h1 className="card absolute z-50 top-0 font-elektra tracking-widest text-xl md:text-3xl flex text-yellow-300 text-center">
+        <h1 className="card absolute z-40 top-0 font-elektra tracking-widest text-xl md:text-3xl flex text-yellow-300 text-center">
           <p> SAVE THE DATE</p> <p className=" font-bold px-2">18 agosto</p>
         </h1>{" "}
         <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute -top-56 md:top-0">
@@ -93,15 +94,7 @@ function Landing() {
           </div>
         </div>
       </div>
-      {isMobile && (
-        <button
-          className="bg-transparent text-white  text-xs font-bold py-2 px-4 flex flex-col  z-50 absolute bottom-6 border rounded-2xl animate-pulse"
-          onClick={handleSmoothScroll}
-        >
-          Revela el misterio tocando aquí
-          <p className="text-center mx-auto text-xl">▽</p>
-        </button>
-      )}{" "}
+      {isMobile && <Button />}
     </>
   );
 }
