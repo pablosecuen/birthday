@@ -4,13 +4,19 @@ const usePageLoading = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let loadingTimeout;
+    let contentLoaded = false;
+
     const handleLoad = () => {
+      contentLoaded = true;
       setLoading(false);
     };
 
     // Inicialmente, marcamos la página como cargada después de un tiempo determinado
-    const loadingTimeout = setTimeout(() => {
-      setLoading(false);
+    loadingTimeout = setTimeout(() => {
+      if (!contentLoaded) {
+        setLoading(false);
+      }
     }, 3000); // Cambia el tiempo según la duración de tus componentes y recursos
 
     // Luego, si el evento de carga se dispara, cancelamos el tiempo de espera y marcamos la página como cargada
