@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 function Button(isMobile, setIsMobile) {
   useEffect(() => {
     setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
-  }, []);
+  }, [isMobile, setIsMobile]);
 
   const handleSmoothScroll = () => {
     if (isMobile) {
