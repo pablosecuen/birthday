@@ -2,11 +2,9 @@ import React from "react";
 
 function Button() {
   const handleSmoothScroll = () => {
-    if (isMobile) {
-      const infoElement = document.getElementById("info");
-      if (infoElement) {
-        infoElement.scrollIntoView({ behavior: "smooth" });
-      }
+    const infoElement = document.getElementById("info");
+    if (infoElement) {
+      infoElement.scrollIntoView({ behavior: "smooth" });
     }
   };
 
