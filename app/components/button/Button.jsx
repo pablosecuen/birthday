@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-function Button(isMobile, setIsMobile) {
+function Button() {
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
   }, [isMobile, setIsMobile]);
