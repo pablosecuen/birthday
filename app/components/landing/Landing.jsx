@@ -5,12 +5,11 @@ import medusa from "../../assets/medusaimg/medusagreen.png";
 import slogan from "../../assets/slogan/slogan.png";
 import columns from "../../assets/medusaimg/columns.png";
 import Button from "../button/Button";
+// import { isMobile } from "react-device-detect";
 
 import "atropos/css";
 
 function Landing() {
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const Atropos = require("atropos").default; // Import Atropos library dynamically
 
@@ -28,10 +27,6 @@ function Landing() {
         console.log("Rotate", x, y);
       },
     });
-  }, []);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
   }, []);
 
   return (
@@ -85,7 +80,8 @@ function Landing() {
           </div>
         </div>
       </div>
-      {isMobile && <Button isMobile={isMobile} />}
+      {/* {isMobile && <Button isMobile={isMobile} />} */}
+      <Button className="mobile-button" />
     </>
   );
 }
