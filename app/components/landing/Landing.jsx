@@ -83,9 +83,9 @@ function Landing() {
               </div>
             </div>
           </div>
+          {isMobile && <Button />}
         </div>
       </div>
-      {isMobile && <Button />}
     </>
   );
 }
