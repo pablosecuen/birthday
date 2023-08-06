@@ -34,8 +34,6 @@ function Landing() {
     setIsMobile(window.innerWidth < 768); // Actualiza el valor de isMobile según el ancho de la pantalla
   }, []);
 
-
-
   return (
     <>
       {/* medusa */}
