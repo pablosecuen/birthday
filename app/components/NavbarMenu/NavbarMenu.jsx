@@ -47,7 +47,7 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
         } fixed z-50 bg-transparent  backdrop-blur-2xl top-12 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 sm:hidden`}
       >
         <div className="w-24 mx-auto py-8"></div>
-        <ul className="flex flex-col">
+        <ul className="pl-4 flex flex-col">
           <li className="my-2 hover:text-secondary transition duration-700 drop-shadow-xl shadow-black hover:scale-125 font-custom text-xl xl:text-2xl">
             <Link href="/">MEDUxA</Link>
           </li>
