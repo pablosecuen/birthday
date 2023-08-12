@@ -44,7 +44,7 @@ const NavbarMenu = ({ isOpen, toggleMenu }) => {
       <div
         className={`transition-all duration-1000 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed z-50 bg-black top-12 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 sm:hidden`}
+        } fixed z-50 bg-transparent  backdrop-blur-2xl top-12 sm:top-16 right-0 w-[50%] h-screen bg-primary shadow-2xl p-4 sm:hidden`}
       >
         <div className="w-24 mx-auto py-8"></div>
         <ul className="flex flex-col">
