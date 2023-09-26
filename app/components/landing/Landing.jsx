@@ -50,7 +50,7 @@ function Landing() {
                     alt="columns"
                     width={800}
                     height={800}
-                    className="medusa top-24 absolute w-[450px] left-48 h-[400px] md:h-[600px]  sm:pl-0 contrast-200 brightness-50 sm:w-[800px] sm:left-24 "
+                    className="medusa top-24 absolute w-[450px] left-48 h-[400px] md:h-[600px]  sm:pl-0 contrast-200 brightness-50 sm:w-[800px] md:left-24 "
                     data-atropos-offset="5"
                   />
 
