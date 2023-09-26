@@ -6,16 +6,13 @@ import slogan from "../../assets/slogan/slogan.png";
 import columns from "../../assets/medusaimg/columns.png";
 import Button from "../button/Button";
 
-
-import "atropos/css";
-
 function Landing() {
   useEffect(() => {
     const Atropos = require("atropos").default; // Import Atropos library dynamically
 
     const myAtropos = Atropos({
       el: ".my-atropos",
-      activeOffset: 40,
+      activeOffset: 30,
       shadowScale: 1.05,
       onEnter() {
         console.log("Enter");
@@ -37,15 +34,15 @@ function Landing() {
           <p> SAVE THE DATE</p> <p className=" font-bold px-2">19 agosto</p>
         </h1>{" "}
         <div className=" flex justify-center w-screen items-center align-middle drop-shadow-sm  absolute -top-56 md:top-0">
-          <div className="atropos my-atropos w-full flex ml-36 mt-20 sm:mt-0 sm:ml-0 ">
+          <div className="atropos my-atropos w-screen flex mt-20 sm:mt-0 sm:ml-0 ">
             {/* <!-- scale container (required) --> */}
-            <div className="atropos-scale  flex">
+            <div className="atropos-scale w-screen flex">
               {/* <!-- rotate container (required) --> */}
 
-              <div className="atropos-rotate  flex">
+              <div className="atropos-rotate w-screen flex">
                 {/* <!-- inner container (required) --> */}
 
-                <div className="atropos-inner relative flex bg-space bg-cover bg-no-repeat bg-center -ml-36 mt-24 sm:mt-0">
+                <div className="atropos-inner w-full relative flex bg-space bg-cover bg-no-repeat bg-center  mt-24 sm:mt-0">
                   {/* <!-- put your custom content here --> */}
 
                   <Image
@@ -80,7 +77,7 @@ function Landing() {
           </div>
         </div>
       </div>
-  
+
       <Button className="mobile-button" />
     </>
   );
